@@ -53,14 +53,14 @@ Window {
             }
             SetAlarmClock{
                 id: alarmMainDialog
-                x: Math.round((parent.width - width) / 2)
-                y: Math.round((parent.height - height) / 2)
+                x: Math.round((window.width - width) / 2)
+                y: Math.round((window.height - height) / 2)
                 alarmModel: alarmListMainView.model
             }
             AlarmNotificate{
                 id: alarmNontification
-                x: Math.round((parent.width - width) / 2)
-                y: Math.round((parent.height - height) / 2)
+                x: Math.round((window.width - width) / 2)
+                y: Math.round((window.height - height) / 2)
             }
 
         }

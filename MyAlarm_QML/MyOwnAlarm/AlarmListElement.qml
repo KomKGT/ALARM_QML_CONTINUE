@@ -9,7 +9,7 @@ ListModel{
         day: 2
         month: 8
         year: 2018
-        activated: true
+        activated: false
         label: "Wake up"
         repeat: true
         daysToRepeat: [

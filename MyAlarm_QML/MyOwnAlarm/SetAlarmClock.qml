@@ -9,6 +9,8 @@ import Qt.labs.calendar 1.0
 Dialog {
     id: alarmDialog
     title: "Add new alarm"
+    width: window.width/2.0
+    height: window.height/2.0
     modal: true
     standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
 
@@ -27,42 +29,42 @@ Dialog {
     }
     onRejected: alarmDialog.close()
 
-    contentItem: RowLayout {
-        spacing: 5
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 0
-        RowLayout {
-            id: rowTumbler
 
-            Slider {
-                id: hoursSlider
-                orientation: Qt.Vertical
-                wheelEnabled: true
-                stepSize: 1
-                to: 23
+    Slider {
+          id: hoursSlider
+          focusPolicy: Qt.NoFocus
+          orientation: Qt.Horizontal
+          x: 0
+          y: alarmDialog.height/2.0 - alarmDialog.height/10
+          width: alarmDialog.width/2.0 - 10
+          wheelEnabled: true
+          stepSize: 1
+          to: 23
 
-            }
-            Slider {
-                id: minutesSlider
-                stepSize: 1
-                orientation: Qt.Vertical
-                wheelEnabled: true
-                enabled: true
-                to: 59
-
-            }
-        }
+     }
+     Slider {
+         id: minutesSlider
+         stepSize: 1
+         x: hoursSlider.width
+         y: alarmDialog.height/2.0 - alarmDialog.height/10
+         width: alarmDialog.width/2.0 - 10
+         orientation: Qt.Horizontal
+         wheelEnabled: true
+         enabled: true
+         to: 59
+      }
 
 
-    }
+
+
 
     Text {
         id: hours_text
-        x: 171
-        y: 97
+        x: alarmDialog.width/4.0 - hours_text.width
+        y: alarmDialog.height/2.0 - 100
         width: 32
         height: 26
+
         text: {
             if(hoursSlider.value<10)
             {
@@ -94,9 +96,19 @@ Dialog {
     }
 
     Text {
+        id: semicolon
+        x: alarmMainDialog.width/2.0
+        y: alarmDialog.height/2.0 - 100
+        width: 32
+        height: 26
+        text: qsTr(":")
+        font.pixelSize: 45
+    }
+
+    Text {
         id: minute_text
-        x: 416
-        y: 97
+        x: alarmDialog.width/2 + alarmDialog.width/4.0 - hours_text.width
+        y: alarmDialog.height/2.0 - 100
         width: 32
         height: 26
         text:if(minutesSlider.value<10)
@@ -127,6 +139,8 @@ Dialog {
         font.pixelSize: 45
     }
 }
+
+
 
 /*##^## Designer {
     D{i:0;autoSize:true;height:480;width:640}

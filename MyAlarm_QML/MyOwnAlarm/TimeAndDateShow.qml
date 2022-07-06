@@ -42,15 +42,16 @@ Item{
         x: window.width/2.0 - showDate.width/2.0
         y: window.height/2.0 - showDate.height/2.0 + showTime.height + 10
         text: qsTr("Date")
+        font.capitalization: Font.AllUppercase
         Layout.fillWidth: true
 
-        style: Text.Raised
+        style: Text.Normal
         font.bold: true
         font.weight: Font.Normal
         font.pointSize: 27
         horizontalAlignment: Text.AlignHCenter
         font{
-            family: "Times New Roman"
+            family: "Tahoma"
         }
     }
 
@@ -66,14 +67,14 @@ Item{
         fontSizeMode: Text.Fit
         Layout.fillWidth: true
 
-        style: Text.Raised
+        style: Text.Normal
         font.bold: true
         wrapMode: Text.NoWrap
         font.weight: Font.Normal
         font.pointSize: 50
         horizontalAlignment: Text.AlignHCenter
         font{
-            family: "Times New Roman"
+            family: "Tahoma"
         }
     }
 
@@ -96,6 +97,22 @@ Item{
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
