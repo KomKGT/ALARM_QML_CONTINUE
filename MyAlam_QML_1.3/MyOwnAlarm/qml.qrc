@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>TimeAndDateShow.qml</file>
+        <file>LightSwitch.qml</file>
+        <file>AlarmNotificate.qml</file>
+        <file>AlarmListElement.qml</file>
+        <file>AlarmListView.qml</file>
+        <file>SetAlarmClock.qml</file>
+        <file>AirCondition.qml</file>
+    </qresource>
+    <qresource prefix="/Images">
+        <file>avani.png</file>
+        <file>bck.jpg</file>
+        <file>bulb_active.png</file>
+        <file>bulb.png</file>
+        <file>home.png</file>
+        <file>House.jpg</file>
+        <file>home2.png</file>
+        <file>Light.png</file>
+        <file>Background.jpg</file>
+        <file>mountain.jpg</file>
+        <file>Amari.png</file>
+        <file>hotel.jpg</file>
+    </qresource>
+</RCC>
